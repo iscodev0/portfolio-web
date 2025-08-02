@@ -186,18 +186,18 @@ export const translations: Record<Language, PersonalData> = {
         architecture: { title: "Arquitectura & Diseño", description: "Sistemas escalables y microservicios" },
       },
     },
-    projects: {
+ projects: {
       title: "Proyectos Destacados",
       items: [
-        // {
-        //   id: "pandaonline",
-        //   name: "pandaonline",
-        //   year: "2025",
-        //   description:
-        //     "Plataforma de lectura de cómics con interfaz similar a Webtoon. Permite subida y gestión de contenido por usuarios.",
-        //   technologies: ["Next.js", "React", "TypeScript"],
-        //   emoji: "📚",
-        // },
+        {
+          id: "image-optimization-api",
+          name: "Image Optimization API",
+          year: "2025",
+          description:
+            "Servidor de optimización de imágenes en tiempo real con sistema de caché inteligente. Soporte multi-formato y respuestas en microsegundos.",
+          technologies: ["Go", "Image Processing", "Cache System", "REST API"],
+          emoji: "🖼️",
+        },
         {
           id: "rodaapp",
           name: "rodaapp.com",
@@ -214,32 +214,6 @@ export const translations: Record<Language, PersonalData> = {
             "Plataforma de gestión de criptomonedas con enfoque en seguridad y escalabilidad. Integración Web3 completa.",
           technologies: ["Blockchain", "Solidity", "Web3"],
           emoji: "💰",
-        },
-        {
-          id: "scraping",
-          name: "Sistemas de Scraping",
-          year: "2024 - En curso",
-          description:
-            "Sistemas automatizados de extracción de datos con Go. Procesamiento masivo y almacenamiento eficiente.",
-          technologies: ["Go", "Go-Colly", "Docker"],
-          emoji: "🔍",
-        },
-        {
-          id: "microservices",
-          name: "Arquitectura de Microservicios",
-          year: "2023 - 2024",
-          description:
-            "Arquitectura de microservicios escalable con Kubernetes. CI/CD automatizado y monitoreo completo.",
-          technologies: ["Kubernetes", "AWS", "Docker"],
-          emoji: "🏗️",
-        },
-        {
-          id: "honojs",
-          name: "APIs con HonoJS",
-          year: "2024",
-          description: "APIs ultra-rápidas con HonoJS. Optimizadas para edge computing, alojadas en Cloudflare alta concurrencia.",
-          technologies: ["HonoJS", "Cloudflare", "TypeScript"],
-          emoji: "⚡",
         },
       ],
     },
@@ -375,18 +349,18 @@ export const translations: Record<Language, PersonalData> = {
         architecture: { title: "Architecture & Design", description: "Scalable systems and microservices" },
       },
     },
-    projects: {
+   projects: {
       title: "Featured Projects",
       items: [
-        // {
-        //   id: "pandaonline",
-        //   name: "pandaonline",
-        //   year: "2025",
-        //   description:
-        //     "Comic reading platform with Webtoon-like interface. Allows users to upload and manage their own content.",
-        //   technologies: ["Next.js", "React", "TypeScript"],
-        //   emoji: "📚",
-        // },
+        {
+          id: "image-optimization-api",
+          name: "Image Optimization API",
+          year: "2025",
+          description:
+            "Real-time image optimization server with smart caching system. Multi-format support and microsecond responses.",
+          technologies: ["Go", "Image Processing", "Cache System", "REST API"],
+          emoji: "🖼️",
+        },
         {
           id: "rodaapp",
           name: "rodaapp.com",
@@ -403,30 +377,6 @@ export const translations: Record<Language, PersonalData> = {
             "Cryptocurrency management platform focused on security and scalability. Complete Web3 integration.",
           technologies: ["Blockchain", "Solidity", "Web3"],
           emoji: "💰",
-        },
-        {
-          id: "scraping",
-          name: "Scraping Systems",
-          year: "2024 - Ongoing",
-          description: "Automated data extraction systems with Go. Massive processing and efficient storage.",
-          technologies: ["Go", "Go-Colly", "Docker"],
-          emoji: "🔍",
-        },
-        {
-          id: "microservices",
-          name: "Microservices Architecture",
-          year: "2023 - 2024",
-          description: "Scalable microservices architecture with Kubernetes. Automated CI/CD and complete monitoring.",
-          technologies: ["Kubernetes", "AWS", "Docker"],
-          emoji: "🏗️",
-        },
-        {
-          id: "honojs",
-          name: "HonoJS APIs",
-          year: "2024",
-          description: "Ultra-fast APIs with HonoJS. Optimized for edge computing and high concurrency.",
-          technologies: ["HonoJS", "Cloudflare", "TypeScript"],
-          emoji: "⚡",
         },
       ],
     },
@@ -562,18 +512,18 @@ export const translations: Record<Language, PersonalData> = {
         architecture: { title: "Arquitetura & Design", description: "Sistemas escaláveis e microserviços" },
       },
     },
-    projects: {
+ projects: {
       title: "Projetos em Destaque",
       items: [
-        // {
-        //   id: "pandaonline",
-        //   name: "pandaonline",
-        //   year: "2025",
-        //   description:
-        //     "Plataforma de leitura de quadrinhos com interface similar ao Webtoon. Permite upload e gestão de conteúdo pelos usuários.",
-        //   technologies: ["Next.js", "React", "TypeScript"],
-        //   emoji: "📚",
-        // },
+        {
+          id: "image-optimization-api",
+          name: "Image Optimization API",
+          year: "2025",
+          description:
+            "Servidor de otimização de imagens em tempo real com sistema de cache inteligente. Suporte multi-formato e respostas em microssegundos.",
+          technologies: ["Go", "Image Processing", "Cache System", "REST API"],
+          emoji: "🖼️",
+        },
         {
           id: "rodaapp",
           name: "rodaapp.com",
@@ -590,32 +540,6 @@ export const translations: Record<Language, PersonalData> = {
             "Plataforma de gestão de criptomoedas com foco em segurança e escalabilidade. Integração Web3 completa.",
           technologies: ["Blockchain", "Solidity", "Web3"],
           emoji: "💰",
-        },
-        {
-          id: "scraping",
-          name: "Sistemas de Scraping",
-          year: "2024 - Em andamento",
-          description:
-            "Sistemas automatizados de extração de dados com Go. Processamento massivo e armazenamento eficiente.",
-          technologies: ["Go", "Go-Colly", "Docker"],
-          emoji: "🔍",
-        },
-        {
-          id: "microservices",
-          name: "Arquitetura de Microserviços",
-          year: "2023 - 2024",
-          description:
-            "Arquitetura de microserviços escalável com Kubernetes. CI/CD automatizado e monitoramento completo.",
-          technologies: ["Kubernetes", "AWS", "Docker"],
-          emoji: "🏗️",
-        },
-        {
-          id: "honojs",
-          name: "APIs com HonoJS",
-          year: "2024",
-          description: "APIs ultra-rápidas com HonoJS. Otimizadas para edge computing e alta concorrência.",
-          technologies: ["HonoJS", "Cloudflare", "TypeScript"],
-          emoji: "⚡",
         },
       ],
     },
