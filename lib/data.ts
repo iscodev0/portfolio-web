@@ -378,15 +378,15 @@ export const translations: Record<Language, PersonalData> = {
     projects: {
       title: "Featured Projects",
       items: [
-        {
-          id: "pandaonline",
-          name: "pandaonline",
-          year: "2025",
-          description:
-            "Comic reading platform with Webtoon-like interface. Allows users to upload and manage their own content.",
-          technologies: ["Next.js", "React", "TypeScript"],
-          emoji: "📚",
-        },
+        // {
+        //   id: "pandaonline",
+        //   name: "pandaonline",
+        //   year: "2025",
+        //   description:
+        //     "Comic reading platform with Webtoon-like interface. Allows users to upload and manage their own content.",
+        //   technologies: ["Next.js", "React", "TypeScript"],
+        //   emoji: "📚",
+        // },
         {
           id: "rodaapp",
           name: "rodaapp.com",
@@ -565,15 +565,15 @@ export const translations: Record<Language, PersonalData> = {
     projects: {
       title: "Projetos em Destaque",
       items: [
-        {
-          id: "pandaonline",
-          name: "pandaonline",
-          year: "2025",
-          description:
-            "Plataforma de leitura de quadrinhos com interface similar ao Webtoon. Permite upload e gestão de conteúdo pelos usuários.",
-          technologies: ["Next.js", "React", "TypeScript"],
-          emoji: "📚",
-        },
+        // {
+        //   id: "pandaonline",
+        //   name: "pandaonline",
+        //   year: "2025",
+        //   description:
+        //     "Plataforma de leitura de quadrinhos com interface similar ao Webtoon. Permite upload e gestão de conteúdo pelos usuários.",
+        //   technologies: ["Next.js", "React", "TypeScript"],
+        //   emoji: "📚",
+        // },
         {
           id: "rodaapp",
           name: "rodaapp.com",
