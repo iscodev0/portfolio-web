@@ -564,9 +564,9 @@ export const translations: Record<Language, PersonalData> = {
 export const staticData = {
   contact: {
     email: "banquezfrancisco@yahoo.com",
-    github: "github.com/loxzer01",
+    github: "github.com/iscodev0",
     linkedin: "linkedin.com/in/franciscobanquez",
-    portfolio: "loxzer01.netlify.app",
+    portfolio: "iscodev-web.vercel.app",
   },
   skills: {
     frontend: ["React", "Next.js", "Astro", "TypeScript", "JavaScript", "Flutter", "React Native"],
