@@ -74,9 +74,9 @@ export const translations: Record<Language, PersonalData> = {
     remoteWork: "Trabajo Remoto",
     about: {
       intro: "Backend Developer especializado en crear sistemas escalables y automatización.",
-      description: "Experiencia sólida en Go, Node.js, y tecnologías de containerización.",
+      description: "Experiencia sólida en Go, Node.js, y tecnologías de containerización. Amplia experiencia validando pull requests, revisando código y asegurando la calidad técnica de los proyectos.",
       currentFocus:
-        "Actualmente enfocado en web scraping, microservicios, y DevOps. Con experiencia liderando equipos y migrando sistemas críticos.",
+        "Actualmente enfocado en web scraping, microservicios, y DevOps. Con experiencia como Product Manager gestionando el rumbo de proyectos, validando estructuras, revisando código y asegurando el cumplimiento del esquema de diseño.",
     },
     experience: {
       title: "Experiencia Laboral",
@@ -113,9 +113,10 @@ export const translations: Record<Language, PersonalData> = {
           period: "Diciembre 2023 - Julio 2024",
           badge: "Liderazgo",
           description: [
-            "Lideré equipo de 5 desarrolladores en migración React Native → Flutter",
-            "Arquitectura de microservicios y orquestación con Kubernetes",
-            "Implementación de CI/CD pipelines y gestión de infraestructura AWS",
+            "Gestión del rumbo del proyecto y validación de la estructura técnica",
+            "Revisión y validación de código, asegurando calidad y buenas prácticas",
+            "Supervisión del cumplimiento del esquema de diseño y estándares de desarrollo",
+            "Colaboración con el equipo para garantizar entregas alineadas a los objetivos del producto",
           ],
           technologies: [
             "Next.js",
