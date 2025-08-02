@@ -650,7 +650,7 @@ export default function TerminalPortfolio() {
             <span className="text-gray-400 mr-2">:</span>
             <span className="text-purple-400 mr-2">~</span>
             <span className="text-gray-400 mr-2">$</span>
-            <span className="text-green-400">echo "{data.footer.thanks}"</span>
+            <span className="text-green-400">echo &quot;{data.footer.thanks}&quot;</span>
           </div>
           <p className="text-gray-400 text-xs sm:text-sm">© 2025 Francisco Banquez. {data.footer.builtWith}</p>
         </div>
