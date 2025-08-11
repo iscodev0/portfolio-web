@@ -68,44 +68,19 @@ export interface PersonalData {
 export const translations: Record<Language, PersonalData> = {
   es: {
     name: "Francisco Banquez",
-    title: "Backend Developer & DevOps Engineer",
+    title: "Backend Developer",
     location: "Portugal",
     status: "Disponible",
     remoteWork: "Trabajo Remoto",
     about: {
-      intro: "Backend Developer especializado en crear sistemas escalables y automatización.",
-      description: "Experiencia sólida en Go, Node.js, y tecnologías de containerización. Amplia experiencia validando pull requests, revisando código y asegurando la calidad técnica de los proyectos.",
+      intro: "Desarrollador Backend con casi 5 años de experiencia en la construcción de sistemas robustos y escalables.",
+      description: "Mi stack principal incluye Node.js, TypeScript y Go, con una sólida base en PostgreSQL y Docker.",
       currentFocus:
-        "Actualmente enfocado en web scraping, microservicios, y DevOps. Con experiencia como Product Manager gestionando el rumbo de proyectos, validando estructuras, revisando código y asegurando el cumplimiento del esquema de diseño.",
+        "Actualmente estoy profundizando mis habilidades en Go y arquitecturas de microservicios para crear aplicaciones más eficientes.",
     },
     experience: {
       title: "Experiencia Laboral",
       jobs: [
-        {
-          id: "kadecode",
-          company: "KadeCode",
-          position: "Go Developer",
-          period: "Diciembre 2024 - Actualidad",
-          current: true,
-          badge: "Actual",
-          description: [
-            "Desarrollo de sistemas de web scraping y automatización con Go",
-            "Implementación de pipelines de datos escalables y eficientes",
-            "Containerización y deployment con Docker en entornos Linux",
-          ],
-          technologies: [
-            "Go",
-            "Go-Colly",
-            "Playwright",
-            "Docker",
-            "Linux",
-            "PostgreSQL",
-            "Drizzle",
-            "HonoJS",
-            "Next.js",
-            "TypeScript",
-          ],
-        },
         {
           id: "techcomet-pm",
           company: "TechComet",
@@ -113,23 +88,11 @@ export const translations: Record<Language, PersonalData> = {
           period: "Diciembre 2023 - Julio 2024",
           badge: "Liderazgo",
           description: [
-            "Gestión del rumbo del proyecto y validación de la estructura técnica",
-            "Revisión y validación de código, asegurando calidad y buenas prácticas",
-            "Supervisión del cumplimiento del esquema de diseño y estándares de desarrollo",
-            "Colaboración con el equipo para garantizar entregas alineadas a los objetivos del producto",
+            "Guié a un equipo de 5 desarrolladores en la migración de una app de React Native a Flutter, mejorando el rendimiento.",
+            "Colaboré en el diseño y migración hacia una arquitectura de microservicios, adquiriendo conocimientos fundamentales de Kubernetes.",
+            "Participé en la definición y supervisión de pipelines de CI/CD y en el despliegue de servicios en AWS.",
           ],
-          technologies: [
-            "Next.js",
-            "Nest.js",
-            "TypeScript",
-            "AWS",
-            "Kubernetes",
-            "Docker",
-            "PostgreSQL",
-            "Redis",
-            "Flutter",
-            "Microservices",
-          ],
+          technologies: ["Flutter", "TypeScript", "Nest.js", "AWS", "Docker", "PostgreSQL", "Kubernetes (Foundational)"],
         },
         {
           id: "techcomet-dev",
@@ -138,35 +101,24 @@ export const translations: Record<Language, PersonalData> = {
           period: "Junio 2022 - Diciembre 2023",
           badge: "Blockchain",
           description: [
-            "Desarrollo de proyectos blockchain y algoritmos de eficiencia",
-            "Implementación de APIs GraphQL y integración con AWS services",
-            "Desarrollo de aplicaciones móviles y web con stack moderno",
+            "Desarrollo de APIs robustas con NestJS y GraphQL para una plataforma con integración blockchain.",
+            "Implementación de la integración con Web3.js para interactuar con smart contracts en Ethereum.",
+            "Trabajé con Firebase y AWS para servicios de autenticación y almacenamiento.",
           ],
-          technologies: [
-            "Next.js",
-            "Nest.js",
-            "TypeScript",
-            "AWS",
-            "CI/CD",
-            "Docker",
-            "Firebase",
-            "GraphQL",
-            "Prisma",
-            "PostgreSQL",
-          ],
+          technologies: ["Next.js", "Nest.js", "GraphQL", "AWS", "Firebase", "Prisma", "PostgreSQL"],
         },
         {
           id: "freelancer",
           company: "Freelancer",
           position: "Web Developer",
           period: "Abril 2021 - Junio 2022",
-          badge: "Blockchain",
+          badge: "Web Apps",
           description: [
-            "Desarrollo completo de aplicaciones blockchain y DeFi",
-            "Implementación de smart contracts y integración Web3",
-            "Configuración de servidores Linux y optimización de sistemas",
+            "Desarrollo de aplicaciones web completas para diversos clientes.",
+            "Implementación de smart contracts básicos y su integración con interfaces en React.",
+            "Configuración y mantenimiento de servidores Linux (VPS) para despliegues.",
           ],
-          technologies: ["React", "Next.js", "Linux", "Nginx", "Express", "MongoDB", "MySQL", "Blockchain"],
+          technologies: ["React", "Node.js", "Express", "MongoDB", "Linux", "Nginx", "Blockchain (Basic)"],
         },
       ],
     },
@@ -181,13 +133,16 @@ export const translations: Record<Language, PersonalData> = {
       specialized: {
         scraping: {
           title: "Web Scraping & Automatización",
-          description: "Sistemas automatizados de extracción de datos",
+          description: "Sistemas para la extracción automatizada de datos.",
         },
-        blockchain: { title: "Blockchain & Web3", description: "Smart contracts y aplicaciones descentralizadas" },
-        architecture: { title: "Arquitectura & Diseño", description: "Sistemas escalables y microservicios" },
+        blockchain: {
+          title: "Blockchain & Web3",
+          description: "Conocimientos en smart contracts y aplicaciones descentralizadas.",
+        },
+        architecture: { title: "Arquitectura de Software", description: "Principios de diseño de APIs y sistemas." },
       },
     },
- projects: {
+    projects: {
       title: "Proyectos Destacados",
       items: [
         {
@@ -221,7 +176,7 @@ export const translations: Record<Language, PersonalData> = {
     contact: {
       title: "Contacto",
       subtitle: "¿Interesado en colaborar? ¡Hablemos!",
-      description: "Disponible para proyectos de backend, DevOps, y sistemas de automatización",
+      description: "Abierto a oportunidades en desarrollo Backend, especialmente con Go y Node.js.",
       availability: "Disponible para trabajo remoto",
       cta: {
         email: "Enviar Email",
@@ -235,44 +190,19 @@ export const translations: Record<Language, PersonalData> = {
   },
   en: {
     name: "Francisco Banquez",
-    title: "Backend Developer & DevOps Engineer",
+    title: "Backend Developer",
     location: "Portugal",
     status: "Available",
     remoteWork: "Remote Work",
     about: {
-      intro: "Backend Developer specialized in creating scalable systems and automation.",
-      description: "Strong experience in Go, Node.js, and containerization technologies.",
+      intro: "Backend Developer with nearly 5 years of experience in building robust and scalable systems.",
+      description: "My core stack includes Node.js, TypeScript, and Go, with a strong foundation in PostgreSQL and Docker.",
       currentFocus:
-        "Currently focused on web scraping, microservices, and DevOps. With experience leading teams and migrating critical systems.",
+        "I am currently deepening my skills in Go and microservices architecture to create more efficient applications.",
     },
     experience: {
       title: "Work Experience",
       jobs: [
-        {
-          id: "kadecode",
-          company: "KadeCode",
-          position: "Go Developer",
-          period: "December 2024 - Present",
-          current: true,
-          badge: "Current",
-          description: [
-            "Development of web scraping and automation systems with Go",
-            "Implementation of scalable and efficient data pipelines",
-            "Containerization and deployment with Docker in Linux environments",
-          ],
-          technologies: [
-            "Go",
-            "Go-Colly",
-            "Playwright",
-            "Docker",
-            "Linux",
-            "PostgreSQL",
-            "Drizzle",
-            "HonoJS",
-            "Next.js",
-            "TypeScript",
-          ],
-        },
         {
           id: "techcomet-pm",
           company: "TechComet",
@@ -280,22 +210,11 @@ export const translations: Record<Language, PersonalData> = {
           period: "December 2023 - July 2024",
           badge: "Leadership",
           description: [
-            "Led team of 5 developers in React Native → Flutter migration",
-            "Microservices architecture and orchestration with Kubernetes",
-            "Implementation of CI/CD pipelines and AWS infrastructure management",
+            "Led a team of 5 developers in migrating a React Native app to Flutter, improving performance.",
+            "Collaborated on the design and migration to a microservices architecture, gaining foundational knowledge of Kubernetes.",
+            "Participated in defining and overseeing CI/CD pipelines and deploying services on AWS.",
           ],
-          technologies: [
-            "Next.js",
-            "Nest.js",
-            "TypeScript",
-            "AWS",
-            "Kubernetes",
-            "Docker",
-            "PostgreSQL",
-            "Redis",
-            "Flutter",
-            "Microservices",
-          ],
+          technologies: ["Flutter", "TypeScript", "Nest.js", "AWS", "Docker", "PostgreSQL", "Kubernetes (Foundational)"],
         },
         {
           id: "techcomet-dev",
@@ -304,35 +223,24 @@ export const translations: Record<Language, PersonalData> = {
           period: "June 2022 - December 2023",
           badge: "Blockchain",
           description: [
-            "Development of blockchain projects and efficiency algorithms",
-            "Implementation of GraphQL APIs and AWS services integration",
-            "Mobile and web application development with modern stack",
+            "Developed robust APIs with NestJS and GraphQL for a platform with blockchain integration.",
+            "Implemented Web3.js integration to interact with smart contracts on the Ethereum blockchain.",
+            "Worked with Firebase and AWS for authentication and storage services.",
           ],
-          technologies: [
-            "Next.js",
-            "Nest.js",
-            "TypeScript",
-            "AWS",
-            "CI/CD",
-            "Docker",
-            "Firebase",
-            "GraphQL",
-            "Prisma",
-            "PostgreSQL",
-          ],
+          technologies: ["Next.js", "Nest.js", "GraphQL", "AWS", "Firebase", "Prisma", "PostgreSQL"],
         },
         {
           id: "freelancer",
           company: "Freelancer",
           position: "Web Developer",
           period: "April 2021 - June 2022",
-          badge: "Blockchain",
+          badge: "Web Apps",
           description: [
-            "Complete development of blockchain and DeFi applications",
-            "Smart contracts implementation and Web3 integration",
-            "Linux server configuration and system optimization",
+            "Developed full web applications for various clients.",
+            "Implemented basic smart contracts and integrated them with React interfaces.",
+            "Configured and maintained Linux servers (VPS) for deployments.",
           ],
-          technologies: ["React", "Next.js", "Linux", "Nginx", "Express", "MongoDB", "MySQL", "Blockchain"],
+          technologies: ["React", "Node.js", "Express", "MongoDB", "Linux", "Nginx", "Blockchain (Basic)"],
         },
       ],
     },
@@ -345,12 +253,18 @@ export const translations: Record<Language, PersonalData> = {
         devops: { title: "DevOps & Cloud", icon: "☁️" },
       },
       specialized: {
-        scraping: { title: "Web Scraping & Automation", description: "Automated data extraction systems" },
-        blockchain: { title: "Blockchain & Web3", description: "Smart contracts and decentralized applications" },
-        architecture: { title: "Architecture & Design", description: "Scalable systems and microservices" },
+        scraping: {
+          title: "Web Scraping & Automation",
+          description: "Systems for automated data extraction.",
+        },
+        blockchain: {
+          title: "Blockchain & Web3",
+          description: "Knowledge of smart contracts and decentralized applications.",
+        },
+        architecture: { title: "Software Architecture", description: "Principles of API and system design." },
       },
     },
-   projects: {
+    projects: {
       title: "Featured Projects",
       items: [
         {
@@ -358,7 +272,7 @@ export const translations: Record<Language, PersonalData> = {
           name: "Image Optimization API",
           year: "2025",
           description:
-            "Real-time image optimization server with smart caching system. Multi-format support and microsecond responses.",
+            "Real-time image optimization server with a smart caching system. Multi-format support and microsecond responses.",
           technologies: ["Go", "Image Processing", "Cache System", "REST API"],
           emoji: "🖼️",
         },
@@ -366,7 +280,7 @@ export const translations: Record<Language, PersonalData> = {
           id: "rodaapp",
           name: "rodaapp.com",
           year: "2024",
-          description: "Delivery and transportation platform. Complete system with geolocation and route management.",
+          description: "Delivery and transportation platform. A complete system with geolocation and route management.",
           technologies: ["React Native", "Node.js", "MongoDB"],
           emoji: "🚗",
         },
@@ -375,7 +289,7 @@ export const translations: Record<Language, PersonalData> = {
           name: "loxcoin.io",
           year: "2021",
           description:
-            "Cryptocurrency management platform focused on security and scalability. Complete Web3 integration.",
+            "Cryptocurrency management platform focused on security and scalability. Full Web3 integration.",
           technologies: ["Blockchain", "Solidity", "Web3"],
           emoji: "💰",
         },
@@ -384,7 +298,7 @@ export const translations: Record<Language, PersonalData> = {
     contact: {
       title: "Get In Touch",
       subtitle: "Interested in collaborating? Let's talk!",
-      description: "Available for backend projects, DevOps, and automation systems",
+      description: "Open to opportunities in Backend development, especially with Go and Node.js.",
       availability: "Available for remote work",
       cta: {
         email: "Send Email",
@@ -398,44 +312,19 @@ export const translations: Record<Language, PersonalData> = {
   },
   pt: {
     name: "Francisco Banquez",
-    title: "Backend Developer & DevOps Engineer",
+    title: "Desenvolvedor Backend",
     location: "Portugal",
     status: "Disponível",
     remoteWork: "Trabalho Remoto",
     about: {
-      intro: "Backend Developer especializado em criar sistemas escaláveis e automação.",
-      description: "Experiência sólida em Go, Node.js, e tecnologias de containerização.",
+      intro: "Desenvolvedor Backend com quase 5 anos de experiência na construção de sistemas robustos e escaláveis.",
+      description: "Meu stack principal inclui Node.js, TypeScript e Go, com uma base sólida em PostgreSQL e Docker.",
       currentFocus:
-        "Atualmente focado em web scraping, microserviços, e DevOps. Com experiência liderando equipes e migrando sistemas críticos.",
+        "Atualmente, estou a aprofundar as minhas competências em Go e arquiteturas de microserviços para criar aplicações mais eficientes.",
     },
     experience: {
       title: "Experiência Profissional",
       jobs: [
-        {
-          id: "kadecode",
-          company: "KadeCode",
-          position: "Go Developer",
-          period: "Dezembro 2024 - Presente",
-          current: true,
-          badge: "Atual",
-          description: [
-            "Desenvolvimento de sistemas de web scraping e automação com Go",
-            "Implementação de pipelines de dados escaláveis e eficientes",
-            "Containerização e deployment com Docker em ambientes Linux",
-          ],
-          technologies: [
-            "Go",
-            "Go-Colly",
-            "Playwright",
-            "Docker",
-            "Linux",
-            "PostgreSQL",
-            "Drizzle",
-            "HonoJS",
-            "Next.js",
-            "TypeScript",
-          ],
-        },
         {
           id: "techcomet-pm",
           company: "TechComet",
@@ -443,22 +332,11 @@ export const translations: Record<Language, PersonalData> = {
           period: "Dezembro 2023 - Julho 2024",
           badge: "Liderança",
           description: [
-            "Liderei equipe de 5 desenvolvedores na migração React Native → Flutter",
-            "Arquitetura de microserviços e orquestração com Kubernetes",
-            "Implementação de pipelines CI/CD e gestão de infraestrutura AWS",
+            "Liderei uma equipa de 5 desenvolvedores na migração de uma app de React Native para Flutter, melhorando o desempenho.",
+            "Colaborei no desenho e migração para uma arquitetura de microserviços, adquirindo conhecimentos fundamentais de Kubernetes.",
+            "Participei na definição e supervisão de pipelines de CI/CD e na implantação de serviços na AWS.",
           ],
-          technologies: [
-            "Next.js",
-            "Nest.js",
-            "TypeScript",
-            "AWS",
-            "Kubernetes",
-            "Docker",
-            "PostgreSQL",
-            "Redis",
-            "Flutter",
-            "Microservices",
-          ],
+          technologies: ["Flutter", "TypeScript", "Nest.js", "AWS", "Docker", "PostgreSQL", "Kubernetes (Fundamental)"],
         },
         {
           id: "techcomet-dev",
@@ -467,40 +345,29 @@ export const translations: Record<Language, PersonalData> = {
           period: "Junho 2022 - Dezembro 2023",
           badge: "Blockchain",
           description: [
-            "Desenvolvimento de projetos blockchain e algoritmos de eficiência",
-            "Implementação de APIs GraphQL e integração com serviços AWS",
-            "Desenvolvimento de aplicações móveis e web com stack moderno",
+            "Desenvolvimento de APIs robustas com NestJS e GraphQL para uma plataforma com integração blockchain.",
+            "Implementação da integração com Web3.js para interagir com smart contracts na blockchain Ethereum.",
+            "Trabalhei com Firebase e AWS para serviços de autenticação e armazenamento.",
           ],
-          technologies: [
-            "Next.js",
-            "Nest.js",
-            "TypeScript",
-            "AWS",
-            "CI/CD",
-            "Docker",
-            "Firebase",
-            "GraphQL",
-            "Prisma",
-            "PostgreSQL",
-          ],
+          technologies: ["Next.js", "Nest.js", "GraphQL", "AWS", "Firebase", "Prisma", "PostgreSQL"],
         },
         {
           id: "freelancer",
           company: "Freelancer",
           position: "Web Developer",
           period: "Abril 2021 - Junho 2022",
-          badge: "Blockchain",
+          badge: "Aplicações Web",
           description: [
-            "Desenvolvimento completo de aplicações blockchain e DeFi",
-            "Implementação de smart contracts e integração Web3",
-            "Configuração de servidores Linux e otimização de sistemas",
+            "Desenvolvimento de aplicações web completas para diversos clientes.",
+            "Implementação de smart contracts básicos e sua integração com interfaces em React.",
+            "Configuração e manutenção de servidores Linux (VPS) para implantações.",
           ],
-          technologies: ["React", "Next.js", "Linux", "Nginx", "Express", "MongoDB", "MySQL", "Blockchain"],
+          technologies: ["React", "Node.js", "Express", "MongoDB", "Linux", "Nginx", "Blockchain (Básico)"],
         },
       ],
     },
     skills: {
-      title: "Habilidades Técnicas",
+      title: "Competências Técnicas",
       categories: {
         frontend: { title: "Frontend", icon: "💻" },
         backend: { title: "Backend", icon: "⚙️" },
@@ -508,12 +375,18 @@ export const translations: Record<Language, PersonalData> = {
         devops: { title: "DevOps & Cloud", icon: "☁️" },
       },
       specialized: {
-        scraping: { title: "Web Scraping & Automação", description: "Sistemas automatizados de extração de dados" },
-        blockchain: { title: "Blockchain & Web3", description: "Smart contracts e aplicações descentralizadas" },
-        architecture: { title: "Arquitetura & Design", description: "Sistemas escaláveis e microserviços" },
+        scraping: {
+          title: "Web Scraping & Automação",
+          description: "Sistemas para a extração automatizada de dados.",
+        },
+        blockchain: {
+          title: "Blockchain & Web3",
+          description: "Conhecimento em smart contracts e aplicações descentralizadas.",
+        },
+        architecture: { title: "Arquitetura de Software", description: "Princípios de desenho de APIs e sistemas." },
       },
     },
- projects: {
+    projects: {
       title: "Projetos em Destaque",
       items: [
         {
@@ -521,7 +394,7 @@ export const translations: Record<Language, PersonalData> = {
           name: "Image Optimization API",
           year: "2025",
           description:
-            "Servidor de otimização de imagens em tempo real com sistema de cache inteligente. Suporte multi-formato e respostas em microssegundos.",
+            "Servidor de otimização de imagens em tempo real com um sistema de cache inteligente. Suporte a múltiplos formatos e respostas em microssegundos.",
           technologies: ["Go", "Image Processing", "Cache System", "REST API"],
           emoji: "🖼️",
         },
@@ -529,7 +402,7 @@ export const translations: Record<Language, PersonalData> = {
           id: "rodaapp",
           name: "rodaapp.com",
           year: "2024",
-          description: "Plataforma de delivery e transporte. Sistema completo com geolocalização e gestão de rotas.",
+          description: "Plataforma de delivery e transporte. Um sistema completo com geolocalização e gestão de rotas.",
           technologies: ["React Native", "Node.js", "MongoDB"],
           emoji: "🚗",
         },
@@ -538,7 +411,7 @@ export const translations: Record<Language, PersonalData> = {
           name: "loxcoin.io",
           year: "2021",
           description:
-            "Plataforma de gestão de criptomoedas com foco em segurança e escalabilidade. Integração Web3 completa.",
+            "Plataforma de gestão de criptomoedas focada em segurança e escalabilidade. Integração Web3 completa.",
           technologies: ["Blockchain", "Solidity", "Web3"],
           emoji: "💰",
         },
@@ -547,7 +420,7 @@ export const translations: Record<Language, PersonalData> = {
     contact: {
       title: "Entre em Contato",
       subtitle: "Interessado em colaborar? Vamos conversar!",
-      description: "Disponível para projetos de backend, DevOps, e sistemas de automação",
+      description: "Aberto a oportunidades em desenvolvimento Backend, especialmente com Go e Node.js.",
       availability: "Disponível para trabalho remoto",
       cta: {
         email: "Enviar Email",
@@ -573,7 +446,7 @@ export const staticData = {
     frontend: ["React", "Next.js", "Astro", "TypeScript", "JavaScript", "Flutter", "React Native"],
     backend: ["Go", "Node.js", "HonoJS", "Express", "Nest.js", "Python", "Django", "GraphQL"],
     databases: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Supabase", "Firebase", "Prisma", "Drizzle"],
-    devops: ["Docker", "Kubernetes", "AWS", "Cloudflare", "Linux", "Nginx", "CI/CD", "Git"],
+    devops: ["Docker", "AWS", "Cloudflare", "Linux", "Nginx", "CI/CD", "Git"],
     specialized: {
       scraping: ["Go-Colly", "Playwright", "Puppeteer", "Process Automation"],
       blockchain: ["Solidity", "Web3.js", "Ethers.js", "Smart Contracts"],
