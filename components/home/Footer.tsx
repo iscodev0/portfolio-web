@@ -16,7 +16,7 @@ export const Footer = ({ data }: FooterProps) => {
         </div>
         <p className="text-muted-foreground mb-2">{data.footer.thanks}</p>
         <p className="text-sm text-muted-foreground">
-          © 2025 Francisco Banquez. {data.footer.builtWith}
+          © 2025 Iscodev. {data.footer.builtWith}
         </p>
       </div>
     </footer>
