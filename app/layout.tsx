@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Isco Banquez - Portfolio",
-  description: "Portfolio of Isco Banquez, a software engineer specializing in web development.",
+  title: "Francisco Banquez - Portfolio",
+  description: "Portfolio of Francisco Banquez, a software engineer specializing in web development.",
 };
 
 export default function RootLayout({

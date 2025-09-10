@@ -16,7 +16,7 @@ export const Navigation = ({ activeSection, scrollToSection }: NavigationProps) 
               {/* <div className="w-8 h-8 bg-foreground rounded-lg flex items-center justify-center mr-3">
                 <span className="text-background font-bold text-sm">ID</span>
               </div> */}
-              <span className="font-semibold text-lg">IscoDev</span>
+              <span className="font-semibold text-lg">Iscodev</span>
             </div>
             
             <div className="hidden md:flex space-x-6">
