@@ -464,7 +464,6 @@ export const staticData = {
     github: "github.com/iscodev0",
     linkedin: "linkedin.com/in/franciscobanquez",
     portfolio: "iscodev.com",
-    phone: "+351 920670446",
   },
   skills: {
     frontend: ["Astro", "React", "Next.js", "Flutter", "React Native", "TypeScript", "JavaScript"],
