@@ -47,6 +47,8 @@ export interface PersonalData {
       description: string
       technologies: string[]
       emoji: string
+      github?: string
+      demo?: string
     }[]
   }
   contact: {
@@ -156,6 +158,7 @@ export const translations: Record<Language, PersonalData> = {
             "Servidor de optimización de imágenes en tiempo real construido con Go, con un sistema de caché inteligente para entregar respuestas en microsegundos.",
           technologies: ["Go", "Image Processing", "Caching", "REST API"],
           emoji: "🖼️",
+          github: "https://github.com/iscodev0/serve-img-optimized",
         },
         {
           id: "rodaapp",
@@ -164,6 +167,7 @@ export const translations: Record<Language, PersonalData> = {
           description: "Una plataforma de traslado, una aplicación móvil para conductor y cliente, con un dashboard para administrar los usuarios.",
           technologies: ["Dart/Flutter", "Next.js", "NestJS", "Microservicios", "WebSocket"],
           emoji: "🚗",
+          demo: "https://rodaapp.com",
         },
         {
           id: "pandascan",
@@ -172,7 +176,9 @@ export const translations: Record<Language, PersonalData> = {
           description:
             "Una aplicación para poder juntar imágenes en cascada en un PDF.",
           technologies: ["PDFjs", "Astro"],
-          emoji: "�",
+          emoji: "📄",
+          github: "https://github.com/iscodev0/many-images-to-pdf",
+          demo: "https://pandascan.online",
         },
       ],
     },
@@ -281,6 +287,7 @@ export const translations: Record<Language, PersonalData> = {
             "Real-time image optimization server built with Go, featuring a smart caching system to deliver responses in microseconds.",
           technologies: ["Go", "Image Processing", "Caching", "REST API"],
           emoji: "🖼️",
+          github: "https://github.com/iscodev0/serve-img-optimized",
         },
         {
           id: "rodaapp",
@@ -289,6 +296,7 @@ export const translations: Record<Language, PersonalData> = {
           description: "A transportation platform, a mobile application for drivers and clients, with a dashboard to manage users.",
           technologies: ["Dart/Flutter", "Next.js", "NestJS", "Microservices", "WebSocket"],
           emoji: "🚗",
+          demo: "https://rodaapp.com",
         },
         {
           id: "pandascan",
@@ -297,7 +305,9 @@ export const translations: Record<Language, PersonalData> = {
           description:
             "An application to combine cascading images into a PDF.",
           technologies: ["PDFjs", "Astro"],
-          emoji: "�",
+          emoji: "📄",
+          github: "https://github.com/iscodev0/many-images-to-pdf",
+          demo: "https://pandascan.online",
         },
       ],
     },
@@ -406,6 +416,7 @@ export const translations: Record<Language, PersonalData> = {
             "Servidor de otimização de imagens em tempo real construído com Go, com um sistema de cache inteligente para entregar respostas em microssegundos.",
           technologies: ["Go", "Image Processing", "Caching", "REST API"],
           emoji: "🖼️",
+          github: "https://github.com/iscodev0/serve-img-optimized",
         },
         {
           id: "rodaapp",
@@ -414,6 +425,7 @@ export const translations: Record<Language, PersonalData> = {
           description: "Uma plataforma de transporte, uma aplicação móvel para condutor e cliente, com um dashboard para administrar os utilizadores.",
           technologies: ["Dart/Flutter", "Next.js", "NestJS", "Microserviços", "WebSocket"],
           emoji: "🚗",
+          demo: "https://rodaapp.com",
         },
         {
           id: "pandascan",
@@ -422,7 +434,9 @@ export const translations: Record<Language, PersonalData> = {
           description:
             "Uma aplicação para poder juntar imagens em cascata num PDF.",
           technologies: ["PDFjs", "Astro"],
-          emoji: "�",
+          emoji: "📄",
+          github: "https://github.com/iscodev0/many-images-to-pdf",
+          demo: "https://pandascan.online",
         },
       ],
     },
@@ -446,7 +460,7 @@ export const translations: Record<Language, PersonalData> = {
 // Static data that doesn't need translation
 export const staticData = {
   contact: {
-    email: "banquezfrancisco@yahoo.com",
+    email: "isco@iscodev.com",
     github: "github.com/iscodev0",
     linkedin: "linkedin.com/in/franciscobanquez",
     portfolio: "iscodev.com",

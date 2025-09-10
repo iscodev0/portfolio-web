@@ -41,6 +41,24 @@ export default function TerminalPortfolio() {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" })
   }
 
+  const handleProjectLink = (url: string) => {
+    window.open(url, "_blank", "noopener,noreferrer")
+  }
+
+  const handleContactLink = (type: "email" | "github" | "linkedin") => {
+    switch (type) {
+      case "email":
+        window.open(`mailto:${staticData.contact.email}`, "_self")
+        break
+      case "github":
+        window.open(`https://${staticData.contact.github}`, "_blank", "noopener,noreferrer")
+        break
+      case "linkedin":
+        window.open(`https://${staticData.contact.linkedin}`, "_blank", "noopener,noreferrer")
+        break
+    }
+  }
+
   if (!isInitialized) {
     return (
       <div className="min-h-screen bg-gray-900 text-green-400 font-mono flex items-center justify-center">
@@ -548,7 +566,7 @@ export default function TerminalPortfolio() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-300 mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech) => (
                       <Badge
                         key={tech}
@@ -572,6 +590,29 @@ export default function TerminalPortfolio() {
                       </Badge>
                     ))}
                   </div>
+                  <div className="flex gap-2">
+                    {project.github && (
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        onClick={() => handleProjectLink(project.github!)}
+                        className="border-gray-600 text-gray-300 hover:bg-gray-700 bg-transparent flex-1"
+                      >
+                        <Github className="w-4 h-4 mr-2" />
+                        GitHub
+                      </Button>
+                    )}
+                    {project.demo && (
+                      <Button
+                        size="sm"
+                        onClick={() => handleProjectLink(project.demo!)}
+                        className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white flex-1"
+                      >
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Demo
+                      </Button>
+                    )}
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -593,7 +634,10 @@ export default function TerminalPortfolio() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
-                <Card className="bg-gray-700 border-gray-600 hover:border-green-500 transition-colors">
+                <Card 
+                  className="bg-gray-700 border-gray-600 hover:border-green-500 transition-colors cursor-pointer"
+                  onClick={() => handleContactLink("email")}
+                >
                   <CardContent className="pt-6 text-center">
                     <Mail className="w-8 h-8 mx-auto mb-4 text-green-400" />
                     <p className="font-semibold text-gray-300 mb-2">Email</p>
@@ -601,7 +645,10 @@ export default function TerminalPortfolio() {
                   </CardContent>
                 </Card>
 
-                <Card className="bg-gray-700 border-gray-600 hover:border-blue-500 transition-colors">
+                <Card 
+                  className="bg-gray-700 border-gray-600 hover:border-blue-500 transition-colors cursor-pointer"
+                  onClick={() => handleContactLink("github")}
+                >
                   <CardContent className="pt-6 text-center">
                     <Github className="w-8 h-8 mx-auto mb-4 text-blue-400" />
                     <p className="font-semibold text-gray-300 mb-2">GitHub</p>
@@ -609,7 +656,10 @@ export default function TerminalPortfolio() {
                   </CardContent>
                 </Card>
 
-                <Card className="bg-gray-700 border-gray-600 hover:border-purple-500 transition-colors">
+                <Card 
+                  className="bg-gray-700 border-gray-600 hover:border-purple-500 transition-colors cursor-pointer"
+                  onClick={() => handleContactLink("linkedin")}
+                >
                   <CardContent className="pt-6 text-center">
                     <Linkedin className="w-8 h-8 mx-auto mb-4 text-purple-400" />
                     <p className="font-semibold text-gray-300 mb-2">LinkedIn</p>
@@ -622,6 +672,7 @@ export default function TerminalPortfolio() {
                 <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center">
                   <Button
                     size="lg"
+                    onClick={() => handleContactLink("email")}
                     className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white"
                   >
                     <Mail className="w-4 h-4 mr-2" />
@@ -630,6 +681,7 @@ export default function TerminalPortfolio() {
                   <Button
                     size="lg"
                     variant="outline"
+                    onClick={() => handleContactLink("github")}
                     className="border-gray-600 text-gray-300 hover:bg-gray-700 bg-transparent"
                   >
                     <Github className="w-4 h-4 mr-2" />
