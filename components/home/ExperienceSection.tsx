@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/badge"
 import { Building2 } from "lucide-react"
+import { PersonalData } from "@/lib/data"
 import { 
   SiReact,
   SiNextdotjs,
@@ -30,7 +31,7 @@ import {
 } from "react-icons/si"
 
 interface ExperienceProps {
-  data: any
+  data: PersonalData
 }
 
 export const ExperienceSection = ({ data }: ExperienceProps) => {
@@ -83,7 +84,7 @@ export const ExperienceSection = ({ data }: ExperienceProps) => {
           <div className="absolute left-4 lg:left-8 top-0 bottom-0 w-0.5 bg-border"></div>
           
           <div className="space-y-8 lg:space-y-12">
-            {data.experience.jobs.map((job: any, index: number) => (
+            {data.experience.jobs.map((job, index: number) => (
               <div key={job.id} className="relative">
                 
                 {/* Mobile Layout (Default) */}

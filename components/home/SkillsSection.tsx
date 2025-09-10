@@ -1,9 +1,10 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Code2, Database, Cloud, Zap } from "lucide-react"
+import { PersonalData } from "@/lib/data"
 import { TechBadge, techStacks } from "./TechBadge"
 
 interface SkillsProps {
-  data: any
+  data: PersonalData
 }
 
 export const SkillsSection = ({ data }: SkillsProps) => {

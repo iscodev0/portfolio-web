@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Mail } from "lucide-react"
+import Image from "next/image"
+import { PersonalData } from "@/lib/data"
 import { 
   SiGo,
   SiNodedotjs,
@@ -10,7 +12,7 @@ import {
 } from "react-icons/si"
 
 interface HeroProps {
-  data: any
+  data: PersonalData
   scrollToSection: (sectionId: string) => void
 }
 
@@ -103,10 +105,13 @@ export const HeroSection = ({ data, scrollToSection }: HeroProps) => {
           {/* Right Column - Professional Illustration */}
           <div className="hidden lg:flex justify-center">
             <div className="relative w-full max-w-md">
-              <img 
+              <Image 
                 src="/image/ilustracion.png" 
                 alt="Professional Developer Illustration" 
+                width={400}
+                height={400}
                 className="w-full h-auto object-contain"
+                priority
               />
             </div>
           </div>

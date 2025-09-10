@@ -22,9 +22,10 @@ import {
   SiSolidity,
   SiEthereum,
 } from "react-icons/si"
+import { IconType } from "react-icons"
 
 interface TechBadgeProps {
-  icon: any
+  icon: IconType
   name: string
   color: string
 }

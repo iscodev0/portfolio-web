@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button"
 import { Mail, Github, Globe } from "lucide-react"
+import { PersonalData } from "@/lib/data"
 
 interface ContactProps {
-  data: any
+  data: PersonalData
   handleContactLink: (type: "email" | "github") => void
 }
 

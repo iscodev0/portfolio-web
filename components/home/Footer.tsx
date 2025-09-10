@@ -1,5 +1,7 @@
+import { PersonalData } from "@/lib/data"
+
 interface FooterProps {
-  data: any
+  data: PersonalData
 }
 
 export const Footer = ({ data }: FooterProps) => {

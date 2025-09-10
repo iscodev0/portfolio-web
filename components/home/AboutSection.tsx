@@ -1,7 +1,9 @@
 import { Zap } from "lucide-react"
+import Image from "next/image"
+import { PersonalData } from "@/lib/data"
 
 interface AboutProps {
-  data: any
+  data: PersonalData
 }
 
 export const AboutSection = ({ data }: AboutProps) => {
@@ -23,10 +25,13 @@ export const AboutSection = ({ data }: AboutProps) => {
             <div className="relative">
               <div className="w-72 h-72 rounded-2xl overflow-hidden bg-gradient-to-br from-blue-500 to-red-600 p-1">
                 <div className="w-full h-full rounded-2xl overflow-hidden bg-background">
-                  <img 
+                  <Image 
                     src="/image/isco.jpg" 
                     alt="Francisco Banquez" 
+                    width={288}
+                    height={288}
                     className="w-full h-full object-cover"
+                    priority
                   />
                 </div>
               </div>

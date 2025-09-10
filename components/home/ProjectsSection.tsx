@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ExternalLink, Github } from "lucide-react"
+import { PersonalData } from "@/lib/data"
 import { 
   SiReact,
   SiNextdotjs,
@@ -28,7 +29,7 @@ import {
 } from "react-icons/si"
 
 interface ProjectsProps {
-  data: any
+  data: PersonalData
   handleProjectLink: (url: string) => void
 }
 
@@ -69,12 +70,12 @@ export const ProjectsSection = ({ data, handleProjectLink }: ProjectsProps) => {
             {data.projects.title}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Some of the projects I've worked on
+            Some of the projects I&apos;ve worked on
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {data.projects.items.map((project: any) => (
+          {data.projects.items.map((project) => (
             <Card
               key={project.id}
               className="hover:shadow-lg transition-shadow cursor-pointer"
@@ -119,7 +120,7 @@ export const ProjectsSection = ({ data, handleProjectLink }: ProjectsProps) => {
                       variant="outline"
                       onClick={(e) => {
                         e.stopPropagation()
-                        handleProjectLink(project.github!)
+                        if (project.github) handleProjectLink(project.github)
                       }}
                     >
                       <Github className="w-4 h-4 mr-2" />
@@ -131,7 +132,7 @@ export const ProjectsSection = ({ data, handleProjectLink }: ProjectsProps) => {
                       size="sm"
                       onClick={(e) => {
                         e.stopPropagation()
-                        handleProjectLink(project.demo!)
+                        if (project.demo) handleProjectLink(project.demo)
                       }}
                     >
                       <ExternalLink className="w-4 h-4 mr-2" />
