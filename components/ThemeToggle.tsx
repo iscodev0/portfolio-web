@@ -3,11 +3,18 @@
 import { Button } from "@/components/ui/button"
 import { Moon, Sun, Monitor } from "lucide-react"
 import { useTheme } from "@/hooks/ThemeContext"
+import { useState, useEffect } from "react"
 
 export function ThemeToggle() {
+  const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
 
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   const cycleTheme = () => {
+    if (!mounted) return
     const themeOrder: Array<"light" | "dark" | "system"> = ["light", "dark", "system"]
     const currentIndex = themeOrder.indexOf(theme)
     const nextTheme = themeOrder[(currentIndex + 1) % themeOrder.length]
@@ -43,6 +50,7 @@ export function ThemeToggle() {
       onClick={cycleTheme}
       className="w-9 h-9 p-0"
       title={getTooltipText()}
+      disabled={!mounted}
     >
       {getIcon()}
       <span className="sr-only">Toggle theme</span>

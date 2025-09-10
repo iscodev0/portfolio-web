@@ -1,103 +1,35 @@
-"use client"
+import { headers } from "next/headers"
+import { translations, type Language } from "@/lib/data"
+import { getMetadata } from "@/lib/metadata"
+import ClientPortfolio from "@/components/ClientPortfolio"
+import type { Metadata } from "next"
 
-import { useState, useEffect } from "react"
-import { useLanguageContext } from "@/hooks/LanguageContext"
-import { translations, staticData } from "@/lib/data"
-import {
-  AnimatedBackground,
-  Navigation,
-  HeroSection,
-  AboutSection,
-  ExperienceSection,
-  SkillsSection,
-  ProjectsSection,
-  ContactSection,
-  Footer
-} from "@/components/home"
+// Function to detect language from headers
+async function getLanguageFromHeaders(): Promise<Language> {
+  const headersList = await headers()
+  const acceptLanguage = headersList.get("accept-language") || ""
+  
+  if (acceptLanguage.includes("en")) return "en"
+  if (acceptLanguage.includes("pt")) return "pt"
+  return "es" // default
+}
 
-export default function Portfolio() {
-  const [activeSection, setActiveSection] = useState("hero")
-  const { language, isInitialized } = useLanguageContext()
-  const data = translations[language]
+// Generate metadata dynamically based on language
+export async function generateMetadata(): Promise<Metadata> {
+  const language = await getLanguageFromHeaders()
+  return getMetadata(language)
+}
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = ["hero", "about", "experience", "skills", "projects", "contact"]
-      const scrollY = window.scrollY + 100
-
-      for (const section of sections) {
-        const element = document.getElementById(section)
-        if (element) {
-          const { offsetTop, offsetHeight } = element
-          if (scrollY >= offsetTop && scrollY < offsetTop + offsetHeight) {
-            setActiveSection(section)
-            break
-          }
-        }
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
-  }
-
-  const handleContactLink = (type: "email" | "github") => {
-    if (type === "email") {
-      window.open(`mailto:${staticData.contact.email}`, "_blank")
-    } else {
-      window.open(staticData.contact.github, "_blank")
-    }
-  }
-
-  const handleProjectLink = (url: string) => {
-    window.open(url, "_blank")
-  }
-
-  if (!isInitialized) {
-    return null
-  }
+// This is now a Server Component that provides SSR
+export default async function Portfolio() {
+  // Detect language on server-side
+  const initialLanguage = await getLanguageFromHeaders()
+  const initialData = translations[initialLanguage]
 
   return (
-    <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
-      <AnimatedBackground />
-      
-      {/* Content with higher z-index */}
-      <div className="relative z-10">
-        <Navigation 
-          activeSection={activeSection} 
-          scrollToSection={scrollToSection} 
-        />
-        
-        <HeroSection 
-          data={data} 
-          scrollToSection={scrollToSection} 
-        />
-        
-        <AboutSection data={data} />
-        
-        <ExperienceSection data={data} />
-        
-        <SkillsSection data={data} />
-        
-        <ProjectsSection 
-          data={data} 
-          handleProjectLink={handleProjectLink} 
-        />
-        
-        <ContactSection 
-          data={data} 
-          handleContactLink={handleContactLink} 
-        />
-        
-        <Footer data={data} />
-      </div>
-    </div>
+    <ClientPortfolio 
+      initialData={initialData} 
+      initialLanguage={initialLanguage} 
+    />
   )
 }

@@ -11,15 +11,23 @@ interface LanguageContextProps {
 
 const LanguageContext = createContext<LanguageContextProps | undefined>(undefined)
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>("es")
+export function LanguageProvider({ 
+  children, 
+  initialLanguage = "es" 
+}: { 
+  children: ReactNode
+  initialLanguage?: Language 
+}) {
+  const [language, setLanguage] = useState<Language>(initialLanguage)
   const [isInitialized, setIsInitialized] = useState(false)
 
   useEffect(() => {
+    // Only run on client-side after hydration
     const savedLanguage = localStorage.getItem("portfolio-language") as Language
     if (savedLanguage && ["es", "en", "pt"].includes(savedLanguage)) {
       setLanguage(savedLanguage)
     } else {
+      // Detect browser language only if no saved preference
       const browserLang = navigator.language.toLowerCase()
       if (browserLang.startsWith("en")) setLanguage("en")
       else if (browserLang.startsWith("pt")) setLanguage("pt")

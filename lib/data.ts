@@ -157,7 +157,7 @@ export const translations: Record<Language, PersonalData> = {
           description:
             "Servidor de optimización de imágenes en tiempo real construido con Go, con un sistema de caché inteligente para entregar respuestas en microsegundos.",
           technologies: ["Go", "Image Processing", "Caching", "REST API"],
-          emoji: "🖼️",
+          emoji: "image",
           github: "https://github.com/iscodev0/serve-img-optimized",
         },
         {
@@ -176,7 +176,7 @@ export const translations: Record<Language, PersonalData> = {
           description:
             "Una aplicación para poder juntar imágenes en cascada en un PDF.",
           technologies: ["PDFjs", "Astro"],
-          emoji: "📄",
+          emoji: "file-text",
           github: "https://github.com/iscodev0/many-images-to-pdf",
           demo: "https://pandascan.online",
         },
@@ -286,7 +286,7 @@ export const translations: Record<Language, PersonalData> = {
           description:
             "Real-time image optimization server built with Go, featuring a smart caching system to deliver responses in microseconds.",
           technologies: ["Go", "Image Processing", "Caching", "REST API"],
-          emoji: "🖼️",
+          emoji: "image",
           github: "https://github.com/iscodev0/serve-img-optimized",
         },
         {
@@ -305,7 +305,7 @@ export const translations: Record<Language, PersonalData> = {
           description:
             "An application to combine cascading images into a PDF.",
           technologies: ["PDFjs", "Astro"],
-          emoji: "📄",
+          emoji: "file-text",
           github: "https://github.com/iscodev0/many-images-to-pdf",
           demo: "https://pandascan.online",
         },
@@ -415,7 +415,7 @@ export const translations: Record<Language, PersonalData> = {
           description:
             "Servidor de otimização de imagens em tempo real construído com Go, com um sistema de cache inteligente para entregar respostas em microssegundos.",
           technologies: ["Go", "Image Processing", "Caching", "REST API"],
-          emoji: "🖼️",
+          emoji: "image",
           github: "https://github.com/iscodev0/serve-img-optimized",
         },
         {
@@ -434,7 +434,7 @@ export const translations: Record<Language, PersonalData> = {
           description:
             "Uma aplicação para poder juntar imagens em cascata num PDF.",
           technologies: ["PDFjs", "Astro"],
-          emoji: "📄",
+          emoji: "file-text",
           github: "https://github.com/iscodev0/many-images-to-pdf",
           demo: "https://pandascan.online",
         },

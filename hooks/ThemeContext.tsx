@@ -15,7 +15,12 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 export function useTheme() {
   const context = useContext(ThemeContext)
   if (!context) {
-    throw new Error("useTheme must be used within a ThemeProvider")
+    // Return default values during SSR or before hydration
+    return {
+      theme: "system" as Theme,
+      setTheme: () => {},
+      actualTheme: "light" as "light" | "dark"
+    }
   }
   return context
 }
@@ -27,8 +32,11 @@ interface ThemeProviderProps {
 export function ThemeProvider({ children }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>("system")
   const [actualTheme, setActualTheme] = useState<"light" | "dark">("light")
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
+    
     // Get theme from localStorage or default to system
     const savedTheme = localStorage.getItem("theme") as Theme
     const initialTheme = savedTheme || "system"
@@ -48,6 +56,8 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
   }, [theme])
 
   const applyTheme = (newTheme: Theme) => {
+    if (!mounted) return
+    
     const root = document.documentElement
     
     let resolvedTheme: "light" | "dark"
@@ -67,6 +77,11 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
     setTheme(newTheme)
     localStorage.setItem("theme", newTheme)
     applyTheme(newTheme)
+  }
+
+  // Prevent flash during hydration
+  if (!mounted) {
+    return <>{children}</>
   }
 
   return (

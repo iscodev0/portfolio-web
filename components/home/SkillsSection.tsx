@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Code2, Database, Cloud, Zap } from "lucide-react"
+import { Code2, Database, Cloud, Zap, Search, Link, Building2 } from "lucide-react"
 import { PersonalData } from "@/lib/data"
 import { TechBadge, techStacks } from "./TechBadge"
 
@@ -116,7 +116,7 @@ export const SkillsSection = ({ data }: SkillsProps) => {
           <Card>
             <CardHeader className="pb-3">
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-2xl">🕷️</span>
+                <Search className="w-6 h-6 text-blue-500" />
                 <CardTitle className="text-lg">{data.skills.specialized.scraping.title}</CardTitle>
               </div>
               <CardDescription className="text-sm">
@@ -138,7 +138,7 @@ export const SkillsSection = ({ data }: SkillsProps) => {
           <Card>
             <CardHeader className="pb-3">
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-2xl">⛓️</span>
+                <Link className="w-6 h-6 text-purple-500" />
                 <CardTitle className="text-lg">{data.skills.specialized.blockchain.title}</CardTitle>
               </div>
               <CardDescription className="text-sm">
@@ -160,7 +160,7 @@ export const SkillsSection = ({ data }: SkillsProps) => {
           <Card>
             <CardHeader className="pb-3">
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-2xl">🏗️</span>
+                <Building2 className="w-6 h-6 text-orange-500" />
                 <CardTitle className="text-lg">{data.skills.specialized.architecture.title}</CardTitle>
               </div>
               <CardDescription className="text-sm">

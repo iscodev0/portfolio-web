@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, Github } from "lucide-react"
+import { ExternalLink, Github, Image, FileText, Car } from "lucide-react"
 import { PersonalData } from "@/lib/data"
 import { 
   SiReact,
@@ -34,6 +34,19 @@ interface ProjectsProps {
 }
 
 export const ProjectsSection = ({ data, handleProjectLink }: ProjectsProps) => {
+  const getProjectIcon = (emoji: string) => {
+    switch (emoji) {
+      case 'image':
+        return <Image className="w-8 h-8 text-blue-500" />
+      case 'file-text':
+        return <FileText className="w-8 h-8 text-green-500" />
+      case '🚗':
+        return <Car className="w-8 h-8 text-red-500" />
+      default:
+        return <span className="text-3xl">{emoji}</span>
+    }
+  }
+
   const getIcon = (tech: string) => {
     switch (tech.toLowerCase()) {
       case 'react': return <SiReact className="w-3 h-3 text-[#61DAFB]" />
@@ -84,7 +97,9 @@ export const ProjectsSection = ({ data, handleProjectLink }: ProjectsProps) => {
               <CardHeader>
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center">
-                    <span className="text-3xl mr-3">{project.emoji}</span>
+                    <div className="mr-3">
+                      {getProjectIcon(project.emoji)}
+                    </div>
                     <CardTitle className="text-lg">{project.name}</CardTitle>
                   </div>
                   <ExternalLink className="w-4 h-4 text-muted-foreground" />
