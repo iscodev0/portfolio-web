@@ -8,10 +8,10 @@ import { languageNames, languageFlags, type Language } from "@/lib/data"
 
 export function LanguageSelector() {
   const { language, changeLanguage, isInitialized } = useLanguageContext()
-  // console.log(`Current Language: ${language}`) // Debugging line to check current language
+  
   if (!isInitialized) {
     return (
-      <Button variant="outline" size="sm" className="bg-gray-700 border-gray-600 text-green-400" disabled>
+      <Button variant="outline" size="sm" className="border-gray-200 dark:border-gray-800" disabled>
         <Globe className="w-4 h-4 mr-2" />
         Loading...
       </Button>
@@ -24,20 +24,20 @@ export function LanguageSelector() {
         <Button
           variant="outline"
           size="sm"
-          className="bg-gray-700 border-gray-600 text-green-400 hover:bg-gray-600 hover:text-green-300"
+          className="border-gray-200 dark:border-gray-800"
         >
           <Globe className="w-4 h-4 mr-2" />
           <span className="mr-1">{languageFlags[language]}</span>
           {languageNames[language]}
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="bg-gray-800 border-gray-700">
+      <DropdownMenuContent className="bg-white dark:bg-black border-gray-200 dark:border-gray-800">
         {(Object.keys(languageNames) as Language[]).map((lang) => (
           <DropdownMenuItem
             key={lang}
             onClick={() => changeLanguage(lang)}
-            className={`text-gray-300 hover:bg-gray-700 hover:text-green-400 cursor-pointer ${
-              language === lang ? "bg-gray-700 text-green-400" : ""
+            className={`text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer ${
+              language === lang ? "bg-gray-100 dark:bg-gray-800" : ""
             }`}
           >
             <span className="mr-2">{languageFlags[lang]}</span>
