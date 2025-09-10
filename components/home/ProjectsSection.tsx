@@ -37,11 +37,11 @@ export const ProjectsSection = ({ data, handleProjectLink }: ProjectsProps) => {
   const getProjectIcon = (emoji: string) => {
     switch (emoji) {
       case 'image':
-        return <Image className="w-8 h-8 text-blue-500" />
+        return <Image className="w-8 h-8 text-blue-500" aria-label="Image processing" />
       case 'file-text':
-        return <FileText className="w-8 h-8 text-green-500" />
+        return <FileText className="w-8 h-8 text-green-500" aria-label="Document processing" />
       case '🚗':
-        return <Car className="w-8 h-8 text-red-500" />
+        return <Car className="w-8 h-8 text-red-500" aria-label="Transportation app" />
       default:
         return <span className="text-3xl">{emoji}</span>
     }
