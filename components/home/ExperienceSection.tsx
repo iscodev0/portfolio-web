@@ -80,15 +80,13 @@ export const ExperienceSection = ({ data }: ExperienceProps) => {
         </div>
 
         <div className="relative">
-          {/* Timeline Line - Different positions for mobile and desktop */}
-          <div className="absolute left-4 lg:left-8 top-0 bottom-0 w-0.5 bg-border"></div>
-          
+
           <div className="space-y-8 lg:space-y-12">
             {data.experience.jobs.map((job, index: number) => (
               <div key={job.id} className="relative">
                 
                 {/* Mobile Layout (Default) */}
-                <div className="block lg:hidden ml-10">
+                <div className="block lg:hidden">
                   <div className="bg-card border border-border rounded-xl p-4 hover:shadow-lg transition-all duration-300">
                     {/* Header with date and badge */}
                     <div className="mb-4">
