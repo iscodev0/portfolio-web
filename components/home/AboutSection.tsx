@@ -23,7 +23,7 @@ export const AboutSection = ({ data }: AboutProps) => {
           {/* Left Column - Profile Image */}
           <div className="flex justify-center order-2 lg:order-1">
             <div className="relative">
-              <div className="w-72 h-72 rounded-2xl overflow-hidden bg-gradient-to-br from-blue-500 to-red-600 p-1">
+              <div className="w-72 h-72 rounded-2xl overflow-hidden bg-gradient-to-br from-blue-500 to-green-600 p-1">
                 <div className="w-full h-full rounded-2xl overflow-hidden bg-background">
                   <Image 
                     src="/image/isco.jpg" 
@@ -37,7 +37,7 @@ export const AboutSection = ({ data }: AboutProps) => {
               </div>
               {/* Decorative elements */}
               <div className="absolute -top-3 -right-3 w-6 h-6 bg-blue-500 rounded-full opacity-80"></div>
-              <div className="absolute -bottom-3 -left-3 w-5 h-5 bg-red-500 rounded-full opacity-60"></div>
+              <div className="absolute -bottom-3 -left-3 w-5 h-5 bg-green-500 rounded-full opacity-60"></div>
             </div>
           </div>
 
