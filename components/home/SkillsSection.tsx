@@ -31,7 +31,7 @@ export const SkillsSection = ({ data }: SkillsProps) => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-3">
                 {techStacks.frontend.map((tech) => (
                   <TechBadge 
                     key={tech.name}
@@ -53,7 +53,7 @@ export const SkillsSection = ({ data }: SkillsProps) => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-3">
                 {techStacks.backend.map((tech) => (
                   <TechBadge 
                     key={tech.name}
@@ -75,7 +75,7 @@ export const SkillsSection = ({ data }: SkillsProps) => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-3">
                 {techStacks.databases.map((tech) => (
                   <TechBadge 
                     key={tech.name}
@@ -97,7 +97,7 @@ export const SkillsSection = ({ data }: SkillsProps) => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-3">
                 {techStacks.devops.map((tech) => (
                   <TechBadge 
                     key={tech.name}
@@ -124,11 +124,11 @@ export const SkillsSection = ({ data }: SkillsProps) => {
               </CardDescription>
             </CardHeader>
             <CardContent className="pt-0">
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-3">
                 {techStacks.specialized.scraping.map((tech) => (
-                  <div key={tech.name} className="flex items-center gap-1 text-xs text-muted-foreground">
-                    <tech.icon className="w-3 h-3" style={{ color: tech.color }} />
-                    <span>{tech.name}</span>
+                  <div key={tech.name} className="flex items-center gap-2 px-2 py-1 bg-muted rounded-md text-sm text-muted-foreground">
+                    <tech.icon className="w-4 h-4" style={{ color: tech.color }} />
+                    <span className="font-medium">{tech.name}</span>
                   </div>
                 ))}
               </div>
@@ -146,11 +146,11 @@ export const SkillsSection = ({ data }: SkillsProps) => {
               </CardDescription>
             </CardHeader>
             <CardContent className="pt-0">
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-3">
                 {techStacks.specialized.blockchain.map((tech) => (
-                  <div key={tech.name} className="flex items-center gap-1 text-xs text-muted-foreground">
-                    <tech.icon className="w-3 h-3" style={{ color: tech.color }} />
-                    <span>{tech.name}</span>
+                  <div key={tech.name} className="flex items-center gap-2 px-2 py-1 bg-muted rounded-md text-sm text-muted-foreground">
+                    <tech.icon className="w-4 h-4" style={{ color: tech.color }} />
+                    <span className="font-medium">{tech.name}</span>
                   </div>
                 ))}
               </div>
@@ -168,8 +168,10 @@ export const SkillsSection = ({ data }: SkillsProps) => {
               </CardDescription>
             </CardHeader>
             <CardContent className="pt-0">
-              <div className="flex flex-wrap gap-2">
-                <div className="text-xs text-muted-foreground">Microservices • REST • Patterns</div>
+              <div className="flex flex-wrap gap-3">
+                <div className="px-3 py-2 bg-secondary rounded-lg text-sm font-medium">Microservices</div>
+                <div className="px-3 py-2 bg-secondary rounded-lg text-sm font-medium">REST APIs</div>
+                <div className="px-3 py-2 bg-secondary rounded-lg text-sm font-medium">Design Patterns</div>
               </div>
             </CardContent>
           </Card>

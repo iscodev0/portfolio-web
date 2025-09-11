@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ExternalLink, Github, Image, FileText, Car } from "lucide-react"
 import { PersonalData } from "@/lib/data"
+import NextImage from "next/image"
 import { 
   SiReact,
   SiNextdotjs,
@@ -34,6 +35,19 @@ interface ProjectsProps {
 }
 
 export const ProjectsSection = ({ data, handleProjectLink }: ProjectsProps) => {
+  const getProjectImage = (projectId: string) => {
+    switch (projectId) {
+      case 'image-optimization-api':
+        return '/image/projects/optimized.png'
+      case 'pandascan':
+        return '/image/projects/pandascan.png'
+      case 'rodaapp':
+        return '/image/projects/rodaapp.png'
+      default:
+        return null
+    }
+  }
+
   const getProjectIcon = (emoji: string) => {
     switch (emoji) {
       case 'image':
@@ -88,27 +102,43 @@ export const ProjectsSection = ({ data, handleProjectLink }: ProjectsProps) => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {data.projects.items.map((project) => (
-            <Card
-              key={project.id}
-              className="hover:shadow-lg transition-shadow cursor-pointer"
-              onClick={() => project.demo && handleProjectLink(project.demo)}
-            >
-              <CardHeader>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center">
-                    <div className="mr-3">
-                      {getProjectIcon(project.emoji)}
-                    </div>
-                    <CardTitle className="text-lg">{project.name}</CardTitle>
+          {data.projects.items.map((project) => {
+            const projectImage = getProjectImage(project.id)
+            
+            return (
+              <Card
+                key={project.id}
+                className="hover:shadow-lg transition-shadow cursor-pointer overflow-hidden"
+                onClick={() => project.demo && handleProjectLink(project.demo)}
+              >
+                {/* Project Image */}
+                {projectImage && (
+                  <div className="relative h-48 bg-muted">
+                    <NextImage
+                      src={projectImage}
+                      alt={project.name}
+                      fill
+                      className="object-cover transition-transform hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
                   </div>
-                  <ExternalLink className="w-4 h-4 text-muted-foreground" />
-                </div>
+                )}
                 
-                <Badge variant="secondary" className="w-fit">
-                  {project.year}
-                </Badge>
-              </CardHeader>
+                <CardHeader>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center">
+                      <div className="mr-3">
+                        {getProjectIcon(project.emoji)}
+                      </div>
+                      <CardTitle className="text-lg">{project.name}</CardTitle>
+                    </div>
+                    <ExternalLink className="w-4 h-4 text-muted-foreground" />
+                  </div>
+                  
+                  <Badge variant="secondary" className="w-fit">
+                    {project.year}
+                  </Badge>
+                </CardHeader>
 
               <CardContent>
                 <CardDescription className="mb-6 leading-relaxed">
@@ -157,7 +187,8 @@ export const ProjectsSection = ({ data, handleProjectLink }: ProjectsProps) => {
                 </div>
               </CardContent>
             </Card>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

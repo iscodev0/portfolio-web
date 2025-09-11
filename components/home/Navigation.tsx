@@ -20,7 +20,7 @@ export const Navigation = ({ activeSection, scrollToSection }: NavigationProps) 
             </div>
             
             <div className="hidden md:flex space-x-6">
-              {["hero", "about", "experience", "skills", "projects", "contact"].map((section) => (
+              {["hero", "about", "projects", "experience", "skills", "contact"].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}

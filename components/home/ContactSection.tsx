@@ -44,7 +44,7 @@ export const ContactSection = ({ data, handleContactLink }: ContactProps) => {
 
           <div className="flex items-center justify-center text-muted-foreground">
             <Globe className="w-4 h-4 mr-2" />
-            <span className="text-sm">Available for freelance & full-time opportunities</span>
+            <span className="text-sm">Available for custom development projects</span>
           </div>
         </div>
       </div>

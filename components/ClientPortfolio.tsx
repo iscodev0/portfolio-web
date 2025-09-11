@@ -29,7 +29,7 @@ export default function ClientPortfolio({ initialData }: ClientPortfolioProps) {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["hero", "about", "experience", "skills", "projects", "contact"]
+      const sections = ["hero", "about", "projects", "experience", "skills", "contact"]
       const scrollY = window.scrollY + 100
 
       for (const section of sections) {
@@ -85,14 +85,14 @@ export default function ClientPortfolio({ initialData }: ClientPortfolioProps) {
         
         <AboutSection data={data} />
         
-        <ExperienceSection data={data} />
-        
-        <SkillsSection data={data} />
-        
         <ProjectsSection 
           data={data} 
           handleProjectLink={handleProjectLink} 
         />
+        
+        <ExperienceSection data={data} />
+        
+        <SkillsSection data={data} />
         
         <ContactSection 
           data={data} 

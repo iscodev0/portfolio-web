@@ -63,7 +63,7 @@ export const AboutSection = ({ data }: AboutProps) => {
                   <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                   <div>
                     <p className="text-sm font-medium text-foreground">Available</p>
-                    <p className="text-xs text-muted-foreground">For opportunities</p>
+                    <p className="text-xs text-muted-foreground">For projects</p>
                   </div>
                 </div>
               </div>

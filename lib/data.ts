@@ -185,8 +185,8 @@ export const translations: Record<Language, PersonalData> = {
     contact: {
       title: "Contacto",
       subtitle: "¿Interesado en colaborar? ¡Hablemos!",
-      description: "Abierto a oportunidades en desarrollo Backend, especialmente con Go y Node.js.",
-      availability: "Disponible para trabajo remoto",
+      description: "Disponible para el desarrollo de proyectos Backend, especialmente con Go y Node.js.",
+      availability: "Disponible para proyectos remotos",
       cta: {
         email: "Enviar Email",
         github: "Ver GitHub",
@@ -314,8 +314,8 @@ export const translations: Record<Language, PersonalData> = {
     contact: {
       title: "Get In Touch",
       subtitle: "Interested in collaborating? Let's talk!",
-      description: "Open to opportunities in Backend development, especially with Go and Node.js.",
-      availability: "Available for remote work",
+      description: "Available for Backend development projects, especially with Go and Node.js.",
+      availability: "Available for remote projects",
       cta: {
         email: "Send Email",
         github: "View GitHub",
@@ -443,8 +443,8 @@ export const translations: Record<Language, PersonalData> = {
     contact: {
       title: "Entre em Contato",
       subtitle: "Interessado em colaborar? Vamos conversar!",
-      description: "Aberto a oportunidades em desenvolvimento Backend, especialmente com Go e Node.js.",
-      availability: "Disponível para trabalho remoto",
+      description: "Disponível para desenvolvimento de projetos Backend, especialmente com Go e Node.js.",
+      availability: "Disponível para projetos remotos",
       cta: {
         email: "Enviar Email",
         github: "Ver GitHub",
